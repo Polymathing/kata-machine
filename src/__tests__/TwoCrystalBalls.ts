@@ -10,5 +10,8 @@ test("two crystal balls", function () {
 
     expect(two_crystal_balls(data)).toEqual(idx);
     expect(two_crystal_balls(new Array(821).fill(false))).toEqual(-1);
+
+    const smallData = [false, false, false, false, true, false];
+    expect(two_crystal_balls(smallData)).toEqual(4);
 });
 
