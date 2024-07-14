@@ -1,4 +1,4 @@
-import LinkedList from "@code/DoublyLinkedList";
+import LinkedList from "day23/DoublyLinkedList";
 import { test_list } from "./ListTest";
 
 test("DoublyLinkedList", function () {
