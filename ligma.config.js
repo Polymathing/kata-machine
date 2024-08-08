@@ -4,6 +4,7 @@ module.exports = {
         "BinarySearchList",
         "TwoCrystalBalls",
         "BubbleSort",
+        "Queue",
     ],
 }
 
