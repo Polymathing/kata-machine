@@ -4,6 +4,7 @@ module.exports = {
         "TwoCrystalBalls",
         "BubbleSort",
         "Queue",
+        "Stack",
     ],
 }
 

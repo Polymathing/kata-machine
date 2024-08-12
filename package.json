@@ -14,11 +14,11 @@
         "typescript": "^4.7.4"
     },
     "scripts": {
-        "test": "jest BinarySearchList TwoCrystalBalls BubbleSort Queue",
+        "test": "jest BinarySearchList TwoCrystalBalls BubbleSort Queue Stack",
         "clear": "node ./scripts/clear.js",
         "prettier": "prettier --write ./src",
         "generate": "node ./scripts/generate.js",
-        "day": "echo src\\day34"
+        "day": "echo src\\day35"
     },
     "devDependencies": {
         "@swc-node/register": "^1.6.7"
