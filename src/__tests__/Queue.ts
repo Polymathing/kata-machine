@@ -1,7 +1,7 @@
 import Queue from "@code/Queue";
 
 test("queue", function () {
-    const list = new Queue<number>();
+    let list = new Queue<number>();
 
     list.enqueue(5);
     list.enqueue(7);
@@ -28,4 +28,33 @@ test("queue", function () {
     list.enqueue(69);
     expect(list.peek()).toEqual(69);
     expect(list.length).toEqual(1);
+
+    // Ensure order is right
+
+    list = new Queue<number>();
+
+    list.enqueue(5);
+    list.enqueue(7);
+    list.enqueue(9);
+
+    expect(list.peek()).toEqual(5);
+    expect(list.deque()).toEqual(5);
+    expect(list.peek()).toEqual(7);
+    expect(list.deque()).toEqual(7);
+    expect(list.peek()).toEqual(9);
+    expect(list.deque()).toEqual(9);
+    expect(list.peek()).toBeUndefined();
+
+    list.enqueue(11);
+
+    expect(list.peek()).toEqual(11);
+    expect(list.deque()).toEqual(11);
+    expect(list.peek()).toBeUndefined();
+
+    list.enqueue(69);
+    expect(list.peek()).toEqual(69);
+    expect(list.length).toEqual(1);
+    expect(list.deque()).toEqual(69);
+    expect(list.peek()).toBeUndefined();
+    expect(list.length).toEqual(0);
 });
