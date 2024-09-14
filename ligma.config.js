@@ -5,6 +5,7 @@ module.exports = {
         "BubbleSort",
         "Queue",
         "Stack",
+        "MazeSolver"
     ],
 }
 
