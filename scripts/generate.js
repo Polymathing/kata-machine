@@ -30,7 +30,8 @@ try { fs.mkdirSync(day_path); } catch (e) { }
 function generate_method(method) {
     return `${method.name}(${method.args || ""}): ${method.return || "void"} {
 
-}`;
+    }
+    `;
 }
 
 function generate_property(prop) {
@@ -48,7 +49,6 @@ function create_class(name, item) {
     ${(item.properties || []).map(generate_property).join("\n    ")}
 
     ${(item.getters || []).map(generate_getter).join("\n    ")}
-
     constructor() {
     }
 
