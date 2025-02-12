@@ -1,4 +1,4 @@
-import Queue from "@code/Queue";
+import Queue from "day95/Queue";
 
 test("queue", function () {
     let list = new Queue<number>();
