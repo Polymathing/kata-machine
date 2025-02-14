@@ -1,36 +1,50 @@
-import maze_solver from "day95/MazeSolver";
+import maze_solver from "@code/MazeSolver";
 
-test("maze solver", function () {
+
+test("maze solver with start or end at edge", function () {
     const maze = [
-        "xxxxxxxxxx x",
-        "x        x x",
-        "x        x x",
-        "x xxxxxxxx x",
-        "x          x",
-        "x xxxxxxxxxx",
+        "xxxxx",
+        "x   x",
+        "x x x",
+        "x   x",
+        "xxxxx",
+    ];
+    const mazeResult = [
+        "xxxxx",
+        "x   x",
+        "x x x",
+        "x   x",
+        "xxxxx",
+    ];
+    const result = maze_solver(maze, "x", { x: 5, y: 0 }, { x: 5, y: 4 });
+    expect(drawPath(maze, result)).toEqual(mazeResult);
+});
+
+test("maze solver with a complex maze", function () {
+    const maze = [
+        "xxxxxxxxxxxxxx",
+        "x     x     xx",
+        "x xxx x xxx  x",
+        "x x   x   x  x",
+        "x xxx x xxx  x",
+        "x xxxxxxx xxxx",
+        "x         x  x",
+        "xxxxxxxxxxxxxx",
     ];
 
     const mazeResult = [
-        { x: 10, y: 0 },
-        { x: 10, y: 1 },
-        { x: 10, y: 2 },
-        { x: 10, y: 3 },
-        { x: 10, y: 4 },
-        { x: 9, y: 4 },
-        { x: 8, y: 4 },
-        { x: 7, y: 4 },
-        { x: 6, y: 4 },
-        { x: 5, y: 4 },
-        { x: 4, y: 4 },
-        { x: 3, y: 4 },
-        { x: 2, y: 4 },
-        { x: 1, y: 4 },
-        { x: 1, y: 5 },
+        "xxxxxxxxxxxxxx",
+        "x     x     xx",
+        "x xxx x xxx  x",
+        "x x   x   x  x",
+        "x xxx x xxx  x",
+        "x xxxxxxx xxxx",
+        "x         x  x",
+        "xxxxxxxxxxxxxx",
     ];
 
-    // there is only one path through
-    const result = maze_solver(maze, "x", { x: 10, y: 0 }, { x: 1, y: 5 });
-    expect(drawPath(maze, result)).toEqual(drawPath(maze, mazeResult));
+    const result = maze_solver(maze, "x", { x: 1, y: 1 }, { x: 12, y: 4 });
+    expect(drawPath(maze, result)).toEqual(mazeResult);
 });
 
 function drawPath(data: string[], path: Point[]) {

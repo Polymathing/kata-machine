@@ -1,4 +1,4 @@
-import Stack from "day95/Stack";
+import Stack from "@code/Stack";
 
 test("stack", function () {
     const list = new Stack<number>();
