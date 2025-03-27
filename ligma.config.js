@@ -7,6 +7,7 @@ module.exports = {
         "Stack",
         "MazeSolver",
         "QuickSort",
+        "DoublyLinkedList"
     ],
 }
 
