@@ -1,4 +1,4 @@
-import maze_solver from "@code/MazeSolver";
+import maze_solver from "day112/MazeSolver";
 
 
 test("maze solver with start or end at edge", function () {

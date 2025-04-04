@@ -30,7 +30,6 @@ export default class Queue<T> {
         if (!this.head) {
             return undefined;
         }
-<<<<<<< HEAD
 
         this.length--;
         if (!this.length) {
@@ -38,25 +37,12 @@ export default class Queue<T> {
         } 
 
         const head = this.head;
-=======
-        
-        this.length--;
-        if (!this.length) {
-            this.tail = undefined;
-        }
-
-        const head = this.head; 
->>>>>>> e60797dc02815eafafb852d813c45d9858591022
         this.head = head.next;
         return head.value;
     }
     
     peek(): T | undefined {
         return this.head?.value;
-<<<<<<< HEAD
     }   
-=======
-    }
->>>>>>> e60797dc02815eafafb852d813c45d9858591022
     
 }
