@@ -4,10 +4,10 @@
         "BinarySearchList": 3,
         "TwoCrystalBalls": 3,
         "BubbleSort": 3,
-        "Queue": 1,
-        "Stack": 1,
-        "MazeSolver": 1,
-        "QuickSort": 1,
-        "DoublyLinkedList": 1
+        "Queue": 2,
+        "Stack": 2,
+        "MazeSolver": 2,
+        "QuickSort": 2,
+        "DoublyLinkedList": 2
     }
 }
