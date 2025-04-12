@@ -26,10 +26,8 @@ const day_name = `day${day}`;
 const day_path = path.join(src_path, day_name);
 const relative_day_path = path.relative(process.cwd(), day_path);
 
-// Update weekly algorithms if needed
 const algorithmsToPractice = updateWeeklyAlgorithms();
 
-// Generate algorithms for the day
 try { fs.unlinkSync(day_path); } catch (e) { }
 try { fs.mkdirSync(day_path); } catch (e) { }
 
@@ -45,7 +43,6 @@ algorithmsToPractice.forEach(ds => {
     }
 });
 
-// Update practice history
 updatePracticeHistory(algorithmsToPractice);
 
 const align = require("./align-configs");
@@ -73,7 +70,6 @@ function create_function(name, item) {
 }`);
 }
 
-// Helper functions for class generation
 function generate_method(method) {
     return `${method.name}(${method.args || ""}): ${method.return || "void"} {
 

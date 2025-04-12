@@ -5,7 +5,7 @@ const trackerPath = path.join(__dirname, "..", "weekly-tracker.json");
 const configPath = path.join(__dirname, "..", "ligma.config.js");
 const testFolderPath = path.join(__dirname, "..", "/src/__tests__");
 
-const KATA_SIZE = 5;
+const KATA_SIZE = 3;
 
 function loadTracker() {
     if (!fs.existsSync(trackerPath)) {
@@ -53,7 +53,7 @@ function saveConfig(selectedAlgorithms) {
 function ensurePracticeHistory(tracker, algorithms) {
     algorithms.forEach(algorithm => {
         if (!tracker.practiceHistory.hasOwnProperty(algorithm)) {
-            tracker.practiceHistory[algorithm] = 0; // Initialize with 0 if not present
+            tracker.practiceHistory[algorithm] = 0;
         }
     });
 }
@@ -62,7 +62,6 @@ function updateWeeklyAlgorithms() {
     const tracker = loadTracker();
     const config = loadConfig();
 
-    // Ensure all algorithms in ligma.config.js are in practiceHistory
     ensurePracticeHistory(tracker, config.dsa);
 
     const lastWeeklyUpdate = new Date(tracker.lastWeeklyUpdate);
@@ -72,28 +71,22 @@ function updateWeeklyAlgorithms() {
     if (now - lastWeeklyUpdate >= oneWeekInMs) {
         console.log("A week has passed. Updating weekly algorithms...");
 
-        // Sort algorithms by practice count (ascending)
         const sortedAlgorithms = Object.entries(tracker.practiceHistory)
             .sort(([, countA], [, countB]) => countA - countB)
             .map(([algorithm]) => algorithm);
 
-        // Select the 5 least-practiced algorithms
         const selectedAlgorithms = sortedAlgorithms.slice(0, KATA_SIZE);
 
-        // Update ligma.config.js
         saveConfig(selectedAlgorithms);
 
-        // Reset weekly tracker
         tracker.lastWeeklyUpdate = now.toISOString();
         console.log("Selected algorithms for the week:", selectedAlgorithms);
 
         saveTracker(tracker);
 
-        // Return the updated config
         return selectedAlgorithms;
     }
 
-    // Return the current config if no weekly update is needed
     return config.dsa;
 }
 
