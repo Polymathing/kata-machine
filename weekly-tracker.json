@@ -6,8 +6,8 @@
         "BubbleSort": 3,
         "Queue": 2,
         "Stack": 2,
-        "MazeSolver": 2,
-        "QuickSort": 2,
+        "MazeSolver": 5,
+        "QuickSort": 3,
         "DoublyLinkedList": 2
     }
 }
