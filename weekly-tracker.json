@@ -1,11 +1,11 @@
 {
-    "lastWeeklyUpdate": "2025-04-12T16:26:35.419Z",
+    "lastUpdate": "2025-04-23T22:35:11.134Z",
     "practiceHistory": {
-        "BinarySearchList": 3,
+        "BinarySearchList": 4,
         "TwoCrystalBalls": 3,
         "BubbleSort": 3,
-        "Queue": 2,
-        "Stack": 2,
+        "Queue": 3,
+        "Stack": 3,
         "MazeSolver": 8,
         "QuickSort": 6,
         "DoublyLinkedList": 5

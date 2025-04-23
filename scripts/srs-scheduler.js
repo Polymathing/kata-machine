@@ -23,7 +23,7 @@ function loadTracker() {
         });
 
         const tracker = {
-            lastWeeklyUpdate: new Date(0).toISOString(),
+            lastUpdate: new Date(0).toISOString(),
             practiceHistory
         };
 
@@ -64,12 +64,12 @@ function updateWeeklyAlgorithms() {
 
     ensurePracticeHistory(tracker, config.dsa);
 
-    const lastWeeklyUpdate = new Date(tracker.lastWeeklyUpdate);
+    const lastUpdate = new Date(tracker.lastUpdate);
     const now = new Date();
-    const oneWeekInMs = 7 * 24 * 60 * 60 * 1000;
+    const fourDaysInMs = 4 * 24 * 60 * 60 * 1000;
 
-    if (now - lastWeeklyUpdate >= oneWeekInMs) {
-        console.log("A week has passed. Updating weekly algorithms...");
+    if (now - lastUpdate >= fourDaysInMs) {
+        console.log("Enough time has passed. Updating algorithms...");
 
         const sortedAlgorithms = Object.entries(tracker.practiceHistory)
             .sort(([, countA], [, countB]) => countA - countB)
@@ -79,7 +79,7 @@ function updateWeeklyAlgorithms() {
 
         saveConfig(selectedAlgorithms);
 
-        tracker.lastWeeklyUpdate = now.toISOString();
+        tracker.lastUpdate = now.toISOString();
         console.log("Selected algorithms for the week:", selectedAlgorithms);
 
         saveTracker(tracker);

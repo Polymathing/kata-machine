@@ -1,7 +1,7 @@
 module.exports = {
     dsa: [
-    "MazeSolver",
-    "QuickSort",
-    "DoublyLinkedList"
+    "Queue",
+    "Stack",
+    "BinarySearchList"
 ]
 };
