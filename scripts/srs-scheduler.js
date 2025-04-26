@@ -6,6 +6,7 @@ const configPath = path.join(__dirname, "..", "ligma.config.js");
 const testFolderPath = path.join(__dirname, "..", "/src/__tests__");
 
 const KATA_SIZE = 3;
+const WINDOW_OF_REFRESH_TIME_IN_MS = 1 * 24 * 60 * 60 * 1000;
 
 function loadTracker() {
     if (!fs.existsSync(trackerPath)) {
@@ -66,7 +67,7 @@ function updateWeeklyAlgorithms() {
 
     const lastUpdate = new Date(tracker.lastUpdate);
     const now = new Date();
-    const fourDaysInMs = 4 * 24 * 60 * 60 * 1000;
+    const fourDaysInMs = WINDOW_OF_REFRESH_TIME_IN_MS;
 
     if (now - lastUpdate >= fourDaysInMs) {
         console.log("Enough time has passed. Updating algorithms...");

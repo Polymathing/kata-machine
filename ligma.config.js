@@ -1,7 +1,10 @@
 module.exports = {
     dsa: [
-    "Queue",
-    "Stack",
-    "BinarySearchList"
-]
+        "Queue",
+        "Stack",
+        "BinarySearchList",
+        "BTPreOrder",
+        "BTPostOrder",
+        "BTInOrder"
+    ]
 };
