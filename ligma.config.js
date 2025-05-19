@@ -1,7 +1,7 @@
 module.exports = {
     dsa: [
     "DoublyLinkedList",
-    "QuickSort",
-    "BTPreOrder"
+    "BTPostOrder",
+    "BTInOrder"
 ]
 };
