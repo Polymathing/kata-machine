@@ -1,16 +1,16 @@
 {
-    "lastUpdate": "2025-05-29T20:02:44.203Z",
+    "lastUpdate": "2025-05-31T14:40:54.090Z",
     "practiceHistory": {
         "BinarySearchList": 10,
         "TwoCrystalBalls": 10,
         "BubbleSort": 10,
         "Queue": 8,
         "Stack": 8,
-        "MazeSolver": 7,
+        "MazeSolver": 8,
         "QuickSort": 7,
         "DoublyLinkedList": 7,
         "BTPreOrder": 7,
-        "BTPostOrder": 6,
-        "BTInOrder": 6
+        "BTPostOrder": 7,
+        "BTInOrder": 7
     }
 }
