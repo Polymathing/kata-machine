@@ -7,9 +7,9 @@
         "Queue": 8,
         "Stack": 8,
         "MazeSolver": 8,
-        "QuickSort": 8,
-        "DoublyLinkedList": 8,
-        "BTPreOrder": 8,
+        "QuickSort": 9,
+        "DoublyLinkedList": 9,
+        "BTPreOrder": 9,
         "BTPostOrder": 7,
         "BTInOrder": 7
     }
