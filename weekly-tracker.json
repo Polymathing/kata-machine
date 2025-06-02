@@ -1,5 +1,5 @@
 {
-    "lastUpdate": "2025-05-31T14:40:54.090Z",
+    "lastUpdate": "2025-06-02T00:15:58.068Z",
     "practiceHistory": {
         "BinarySearchList": 10,
         "TwoCrystalBalls": 10,
@@ -7,9 +7,9 @@
         "Queue": 8,
         "Stack": 8,
         "MazeSolver": 8,
-        "QuickSort": 7,
-        "DoublyLinkedList": 7,
-        "BTPreOrder": 7,
+        "QuickSort": 8,
+        "DoublyLinkedList": 8,
+        "BTPreOrder": 8,
         "BTPostOrder": 7,
         "BTInOrder": 7
     }
