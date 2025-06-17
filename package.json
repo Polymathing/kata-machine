@@ -14,11 +14,11 @@
         "typescript": "^4.7.4"
     },
     "scripts": {
-        "test": "jest Stack MazeSolver QuickSort",
+        "test": "jest DoublyLinkedList BTPreOrder BTPostOrder",
         "clear": "node ./scripts/clear.js",
         "prettier": "prettier --write ./src",
         "generate": "node ./scripts/generate.js",
-        "day": "echo src\\day140"
+        "day": "echo src\\day141"
     },
     "devDependencies": {
         "@swc-node/register": "^1.6.7"
