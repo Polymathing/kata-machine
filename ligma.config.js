@@ -1,7 +1,7 @@
 module.exports = {
     dsa: [
-    "BubbleSort",
-    "Queue",
-    "Stack"
+    "MazeSolver",
+    "BTInOrder",
+    "BinarySearchList"
 ]
 };
