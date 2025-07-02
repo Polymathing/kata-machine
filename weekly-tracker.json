@@ -8,9 +8,9 @@
         "Stack": 12,
         "MazeSolver": 13,
         "QuickSort": 13,
-        "DoublyLinkedList": 12,
-        "BTPreOrder": 12,
-        "BTPostOrder": 12,
+        "DoublyLinkedList": 13,
+        "BTPreOrder": 13,
+        "BTPostOrder": 13,
         "BTInOrder": 11
     }
 }
