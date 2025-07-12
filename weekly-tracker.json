@@ -4,13 +4,14 @@
         "BinarySearchList": 13,
         "TwoCrystalBalls": 13,
         "BubbleSort": 13,
-        "Queue": 13,
-        "Stack": 13,
+        "Queue": 14,
+        "Stack": 14,
         "MazeSolver": 13,
         "QuickSort": 13,
         "DoublyLinkedList": 13,
         "BTPreOrder": 13,
         "BTPostOrder": 13,
-        "BTInOrder": 13
+        "BTInOrder": 14,
+        "BTBFS": 1
     }
 }
