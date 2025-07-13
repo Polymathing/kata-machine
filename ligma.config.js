@@ -1,8 +1,7 @@
 module.exports = {
     dsa: [
-        "Queue",
-        "Stack",
-        "BTInOrder",
-        "BTBFS"
-    ]
+    "BTBFS",
+    "BinarySearchList",
+    "TwoCrystalBalls"
+]
 };
