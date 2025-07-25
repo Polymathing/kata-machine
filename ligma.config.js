@@ -1,7 +1,7 @@
 module.exports = {
     dsa: [
     "BTBFS",
-    "BubbleSort",
-    "MazeSolver"
+    "QuickSort",
+    "DoublyLinkedList"
 ]
 };
