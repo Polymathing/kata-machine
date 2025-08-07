@@ -1,7 +1,7 @@
 module.exports = {
     dsa: [
     "BTBFS",
-    "BTPreOrder",
-    "BTPostOrder"
+    "BinarySearchList",
+    "TwoCrystalBalls"
 ]
 };
